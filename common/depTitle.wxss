@@ -1,0 +1,10 @@
+.title{
+    font-size: 32rpx;
+    margin: 30rpx 0 30rpx 260rpx;
+}
+.title text{
+    padding: 30rpx;
+    padding-bottom: 10rpx;
+    color: #AB956D;
+    border-bottom: 8rpx solid #AB956D;
+}
