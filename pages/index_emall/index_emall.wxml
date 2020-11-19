@@ -1,0 +1,29 @@
+<view class="main">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="index">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="search">
+        <navigator url="../search/search">
+            <view class="search-text">
+                <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+                搜 索
+            </view>
+        </navigator>
+    </view>
+    <view class="newest">
+        <view class="newest-title"><text>最近新品</text></view>
+        <view class="newest-box">
+            <view class="newest-list" wx:for="{{list}}" wx:key="index">
+                <view bindtap="toDetail" id="{{item._id}}">
+                    <image lazy-load="true" mode="aspectFit" src="{{item.image[0]}}"></image>
+                    <view class="newest-text"><text>{{item.title}}</text></view>
+                    <view class="newest-text"><text>￥ {{item.price}}</text></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,37 @@
+@import '../../common/common.wxss';
+
+.title {
+  padding: 5rpx 30rpx;
+  height: 50rpx;
+  width: 100%;
+  border-bottom: 3rpx solid #ededed;
+  color: #999;
+  background-color: #ededed;
+}
+
+.orders-box {
+  margin-top: 10rpx;
+  padding: 20rpx 20rpx;
+}
+
+.orders-box .order-list {
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  height: 100rpx;
+  border: 2rpx solid #ab956d;
+  color: #999;
+  border-radius: 20rpx;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.total {
+  margin-left: 20rpx;
+}

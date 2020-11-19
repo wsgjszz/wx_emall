@@ -1,0 +1,38 @@
+@import '../../common/common.wxss';
+@import '../../common/depTitle.wxss';
+.notice-box{
+    padding: 0 30rpx;
+}
+.notice-box textarea{
+    height: 200rpx;
+    width: 100%;
+    border-bottom: 3rpx solid #ededed;
+    color: #999;
+    background-color: #ededed; 
+}
+.notice-box .text_area{
+    color: rgb(48, 5, 37);
+    font-size: 36rpx;
+    background-color: #ededed;
+    height: 250rpx;
+}
+button{
+    width: 310rpx; 
+    margin:40rpx 20rpx 0 220rpx;
+    border: 2rpx solid rgba(0,0,0,.2);
+    border-radius: 20rpx;
+}
+.image_block{
+  margin: 0 25rpx;
+  width: 700rpx;
+  height: 500rpx;
+  align-items: center;
+}
+.image_block image{
+  margin: 20rpx 5% 0 5%;
+}
+.totalPay{
+  margin-top: 15rpx;
+  text-align: center;
+  font-size: 36rpx;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"商城首页",
+  "enablePullDownRefresh":true,
+  "backgroundColor": "#eee",
+  "backgroundTextStyle":"light",
+  "onReachBottomDistance":50
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "搜索页面",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee",
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 50
+}

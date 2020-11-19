@@ -1,0 +1,13 @@
+<view class="main">
+  <view class="title">显示订单默认已付款，未付款订单卖家不为处理</view>
+  <view class="orders-box">
+    <view class="order-list" wx:for="{{orderList}}" wx:key="index">
+      <navigator url='/pages/orderDetail/orderDetail?id={{item._id}}'>
+        <view class="time">{{item.time}}</view>
+        <text wx:if="{{item.status}}" class="green">已处理</text>
+        <text wx:else class="red">未处理</text>
+        <text class="total">￥ {{item.total}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>

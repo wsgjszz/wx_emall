@@ -1,0 +1,24 @@
+<view class="main">
+    <view class="search-box">
+        <input class="search-input" placeholder="搜索" value="{{value}}" bindinput="searchInput" />
+        <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+        <text class="search-btn" wx:if="{{showResult}}" bindtap="cancelSearch">取消</text>
+    </view>
+  <view wx:if="{{isShow}}">
+      <view class="result" wx:if="{{isResult}}">
+        <view class="result-title"><text>搜索结果</text></view>
+        <view class="result-box">
+            <view class="result-list" wx:for="{{result}}" wx:key="index">
+                <view bindtap="toDetail" id="{{item._id}}">
+                    <image lazy-load="true" mode="aspectFit" src="{{item.image[0]}}"></image>
+                    <view class="result-text"><text>{{item.title}}</text></view>
+                    <view class="result-text"><text>￥ {{item.price}}</text></view>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view class="result-null" wx:else>
+        <view class="null-tips">Oh~~ 搜索结果为空！</view>
+      </view>
+  </view>
+</view>

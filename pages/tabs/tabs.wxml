@@ -1,0 +1,22 @@
+<view class="main">
+    <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+    </view>
+
+    <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-with-animation="true">
+        <view class="result" wx:if="{{isResult}}">
+        <view class="result-box">
+            <view class="result-list" wx:for="{{detail}}" wx:key="index">
+                <view bindtap="toDetail" id="{{item._id}}">
+                    <image lazy-load="true" mode="aspectFit" src="{{item.image[0]}}"></image>
+                    <view class="result-text"><text>{{item.title}}</text></view>
+                    <view class="result-text"><text>￥ {{item.price}}</text></view>
+                </view>
+            </view>
+        </view>
+      </view>
+    </scroll-view>
+
+</view>

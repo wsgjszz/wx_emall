@@ -1,0 +1,20 @@
+@import '../../../common/common.wxss';
+@import '../../../common/depTitle.wxss';
+.form-box{
+    padding: 0 30rpx;
+}
+.form-box textarea{
+    height: 200rpx;
+    width: 100%;
+    border-bottom: 3rpx solid #ededed;
+    color: #999;
+    background-color: #ededed; 
+}
+.form-box .textarea-placeholder{
+    color: #aaa;
+}
+.form-box button{
+    width: 310rpx; 
+    float: left;
+    margin:20rpx 20rpx 0 210rpx;
+}

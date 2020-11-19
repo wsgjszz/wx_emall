@@ -1,0 +1,25 @@
+<view class="main">
+    <view class="form-box">
+        <view class="title">
+            <text>新增商品</text>
+        </view>
+        <form bindsubmit="formSubmit">
+            <input type="text" placeholder="商品标题" value="{{mall.title}}" bindinput="getInput_title"></input>
+            <input type="text" placeholder="商品价格" value="{{mall.price}}" bindinput="getInput_price" class="price"></input>
+            <input type="text" placeholder="商品分类" value="{{mall.tab}}" bindinput="getInput_tab" class="tab"></input>
+            <input type="text" placeholder="商品详情" value="{{mall.detail}}" bindinput="getInput_deatil"></input>
+            <input type="text" placeholder="商品参数" value="{{mall.parameter}}" bindinput="getInput_parameter"></input>
+            <button bindtap="getImage">选择图片</button>
+            <button bindtap="submit" type="primary">提交</button>
+        </form>
+    </view>
+</view>
+<view class="block"></view>
+<view class="text_area">
+      <view>注意事项</view>
+      <view>1.商品标题字数限制在10~20之间</view>
+      <view>2.商品分类若填写错误，则无法在分类显示</view>
+      <view>3.商品标题，商品价格，商品分类为必填项</view>
+      <view>4.商品详情和商品参数为选填项，默认为‘无’</view>
+      <view>5.商品图片目前提交9张，图片越多提交速度越慢</view>
+</view>

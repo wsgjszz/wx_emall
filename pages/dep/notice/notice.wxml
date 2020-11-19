@@ -1,0 +1,11 @@
+<view class="main">
+    <view class="form-box">
+        <view class="title">
+            <text>编辑公告</text>
+        </view>
+        <form bindsubmit="formSubmit">
+            <textarea type="text" placeholder="于此处编辑公告" value="{{i_name}}" bindinput="getInput_name"></textarea>
+            <button bindtap="submit" type="primary">提交</button>
+        </form>
+    </view>
+</view>

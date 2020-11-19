@@ -1,0 +1,17 @@
+<!--pages/dep/orders/orders.wxml-->
+<view class="main">
+  <view class="left">
+    <view class="{{aclass}}" bindtap="switchTapa">未处理订单</view>
+    <view class="{{bclass}}" bindtap="switchTapb">已处理订单</view>
+  </view>
+  <view class="right">
+    <view wx:for="{{orders}}" wx:key="index" class="orders-list">
+      <navigator url="/pages/orderDetail/orderDetail?id={{item._id}}&isAdmin=true">
+        <view class="time">{{item.time}}</view>
+        <text wx:if="{{item.status}}" class="green">已处理</text>
+        <text wx:else class="red">未处理</text>
+        <text class="total">￥ {{item.total}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>

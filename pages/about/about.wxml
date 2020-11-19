@@ -1,0 +1,18 @@
+<view class="main">
+  <view class="notice-box">
+    <view class="title">
+      <text>关于下单</text>
+    </view>
+    <view class="text_area">
+      {{notice}}
+    </view>
+  </view>
+</view>
+<view wx:if="{{total>0}}" class="totalPay">需付款：￥ {{total}}</view>
+<button wx:if="{{isHide}}" bindtap="switchTap">咨询客服</button>
+<button wx:else bindtap="switchTap">微信付款</button>
+<view class="image_block">
+  <image wx:if='{{isHide}}' src="/icons/wx_pay.jpg" mode="aspectFit"></image>
+  <image wx:else src="/icons/wx_img.jpg" mode="aspectFit"></image>
+</view>
+<button wx:if="{{total>0}}" type="primary" bindtap="toUser">确认付款</button>

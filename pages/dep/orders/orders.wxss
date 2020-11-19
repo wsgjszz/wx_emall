@@ -1,0 +1,51 @@
+page{
+  height: 100%;
+  width: 100%;
+  padding: 0 5rpx;
+  background-color: #dddad4;
+}
+.main{
+  height: 100%;
+  width: 100%;
+}
+.left{
+  height: 100%;
+  width: 218rpx;
+  border-right: 4rpx solid #AB956D;
+  float: left;
+  background-color: rgb(226, 207, 172);
+}
+.letf_list{
+  font-size: 34rpx;
+  height: 60rpx;
+}
+.on{
+  background-color: rgb(199, 193, 181);
+  font-size: 38rpx;
+  width: 100%;
+  height: 50rpx;
+  color: rgb(241, 233, 233);
+}
+.right{
+  height: 100%;
+  width: 520rpx;
+  float: right;
+}
+.right .orders-list{
+  width: 100%;
+  height: 90rpx;
+  padding: 20rpx 10rpx;
+  background-color: #eee;
+  border-bottom: 5rpx solid rgb(145, 136, 136);
+}
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.total {
+  margin-left: 20rpx;
+}

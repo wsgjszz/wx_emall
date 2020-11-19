@@ -1,0 +1,37 @@
+
+<view class="main">
+    <view class="header">
+        <image src="{{userInfo.avatarUrl}}" class="thumb"></image>
+        <text class="nickname">{{userInfo.nickName}}</text>
+        <text wx:if="{{hasUserInfo}}" bindtap="quit"> | 注销 </text>
+        <text wx:if="{{isAdmin}}" class="switch" bindtap="switchTap">切换 | </text>
+        <text bindtap="toSwitch" class="about">{{!isHide?'关于下单':'管理中心'}}</text>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/address/address">地址管理</navigator>
+        </view>
+        <view wx:if="{{hasAddress}}" class="address-list">
+            <view>{{address.name}}</view>
+            <view>{{address.phone}}</view>
+            <view>{{address.detail}}</view>
+        </view>
+    </view>
+    <view class="orders-box">
+        <view class="orders"><navigator url="/pages/userOrders/userOrders">我的订单</navigator></view>
+        <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+            <view class="orders-number">订单编号：{{item.number}}</view>
+            <view class="orders-detail">
+                <image src="{{item.thumb}}"></image>
+                <view class="">{{item.name}}</view>
+                <view class="">{{item.count}}</view>
+                <text class="orders-status">{{item.status}}</text>
+            </view>
+            <view class="orders-footer">
+                <text>实付：￥{{item.money}}</text>
+                <button size="mini" class="orders-btn" bindtap="payOrders">付款</button>
+            </view>
+        </view>
+    </view>
+    <button class="btn" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary">获取用户授权</button>
+</view>

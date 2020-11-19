@@ -1,0 +1,27 @@
+<view class="main">
+  <view class="orders-address">
+    <text class="orders-address-name">收货人: {{order.user.name}}</text>
+    <text class="orders-address-phone">电话: {{order.user.phone}}</text>
+    <view class="orders-address-detail">收货地址：{{order.user.detail}}</view>
+  </view>
+  <view class="orders-box">
+    <view wx:for="{{orders}}" wx:key="index" class="orders-list">
+      <image class="orders-thumb" src="{{item.image[0]}}"></image>
+      <view class="orders-pro-name">{{item.title}}</view>
+      <view class="orders-pro-price">￥{{item.price}}</view>
+      <view class="orders-count-num">×{{item.num}}</view>
+    </view>
+  </view>
+
+  <view class="orders-footer">
+    <view class="orders-footer-total">付款合计：￥{{order.total}}</view>
+    <view wx:if="{{isAdmin}}">
+      <view wx:if="{{order.status}}" class="orders-footer-btn">已经处理</view>
+      <view wx:else class="orders-footer-btn" bindtap="active">确认处理</view>
+    </view>
+    <view wx:else>
+      <view wx:if="{{order.status}}" class="orders-footer-btn">无法取消</view>
+      <view wx:else class="orders-footer-btn" bindtap="cancel">取消订单</view>
+    </view>
+  </view>
+</view>

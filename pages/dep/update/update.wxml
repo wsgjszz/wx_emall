@@ -1,0 +1,23 @@
+<view class="main">
+    <view class="form-box">
+        <view class="title">
+            <text>修改商品</text>
+        </view>
+        <form bindsubmit="formSubmit">
+            <input type="text" placeholder="商品标题" value="{{mall.title}}" bindinput="getInput_title"></input>
+            <input type="text" placeholder="商品价格" value="{{mall.price}}" bindinput="getInput_price" class="price"></input>
+            <input type="text" placeholder="商品分类" value="{{mall.tab}}" bindinput="getInput_tab" class="tab"></input>
+            <input type="text" placeholder="商品详情" value="{{mall.detail}}" bindinput="getInput_deatil"></input>
+            <input type="text" placeholder="商品参数" value="{{mall.parameter}}" bindinput="getInput_parameter"></input>
+            <button bindtap="getImage">选择图片</button>
+            <button bindtap="submit" type="primary">提交</button>
+        </form>
+    </view>
+</view>
+<view class="block"></view>
+<view class="text_area">
+      <view>注意事项</view>
+      <view>1.商品标题作为检索条件</view>
+      <view>2.其余信息皆为修改项，不填写则为空</view>
+      <view>3.图片信息可不修改直接提交，保留原来图片</view>
+</view>

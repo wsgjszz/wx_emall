@@ -1,0 +1,18 @@
+@import '../../../common/common.wxss';
+@import '../../../common/depTitle.wxss';
+.form-box{
+    padding-left: 30rpx;
+}
+.form-box input{
+    height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    color: #999;
+}
+.form-box .input-placeholder{
+    color: #aaa;
+}
+.form-box button{
+    width: 310rpx; 
+    float: left;
+    margin:20rpx 20rpx 0 210rpx;
+}

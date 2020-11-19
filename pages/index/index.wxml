@@ -1,0 +1,9 @@
+<view class="container">
+  <button type="primary" bindtap="ToaddEmall">新增商品</button>
+  <button type="primary" bindtap="TodeleteEmall">删除商品</button>
+  <button type="primary" bindtap="ToupdateEmall">修改商品</button>
+  <button type="primary" bindtap="ToaddTabs">新增分类</button>
+  <button type="primary" bindtap="TodeleteTabs">删除分类</button>
+  <button type="primary" bindtap="ToNotice">编辑公告</button>
+  <button type="primary" bindtap="ToOrders">查看订单</button>
+</view>

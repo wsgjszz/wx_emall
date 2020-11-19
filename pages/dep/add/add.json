@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"管理页面",
+  "enablePullDownRefresh":true
+}

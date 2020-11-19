@@ -1,0 +1,11 @@
+<view class="main">
+    <view class="form-box">
+        <view class="title">
+            <text>新增分类</text>
+        </view>
+        <form bindsubmit="formSubmit">
+            <input type="text" placeholder="分类名称" value="{{i_name}}" bindinput="getInput_name"></input>
+            <button bindtap="submit" type="primary">提交</button>
+        </form>
+    </view>
+</view>
